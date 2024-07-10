@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Palanquin+Dark:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
       overflow-x: hidden;
@@ -17,9 +18,9 @@
       min-height: 100vh;
     }
 
-    div{
+    /* div{
       border: 1px solid red;
-    }
+    } */
 
     .material-symbols-outlined {
       font-variation-settings:
@@ -29,10 +30,22 @@
       'opsz' 24
     }
 
+    .bebas-neue-regular {
+      font-family: "Bebas Neue", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
     .lexend-tera{
       font-family: "Lexend Tera", sans-serif;
       font-optical-sizing: auto;
       font-weight: bold;
+      font-style: normal;
+    }
+
+    .palanquin-dark-bold {
+      font-family: "Palanquin Dark", sans-serif;
+      font-weight: 700;
       font-style: normal;
     }
 
@@ -132,9 +145,126 @@
     }
 
     .first-space{
-      height: 30vw;
-      background-color: rgb(162, 96, 96);
+      height: 15vw;
+      background-color: rgb(255, 255, 255);
       z-index: 10;
+    }
+
+    .second-space{
+      height: 15vw;
+      background-color: rgb(255, 255, 255);
+      z-index: 11;
+    }
+
+    .secondrow {
+      height: 95vh;
+      background-color: azure;
+      background-image: url('1bg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      z-index: -3;
+    }
+
+    .spacetext{
+      display: flex;
+      justify-content: center;
+      padding-top: 6.5%;
+      font-size: 30px;
+      font-family: 'Lexend Tera';
+    }
+
+    .third-img{
+      background-image: url('2.1.png');
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      z-index: 0;
+      position: absolute;
+      height: 60vw;
+      margin-left: 26%;
+      margin-top: 0%;
+      opacity: 0;
+      transition: filter 1.5s ease-in-out;
+      animation: focusIn 3s forwards, zoomIn 4s forwards, fadeInOpacity 3s forwards;
+      animation-delay: 0s;
+    }
+
+    .second-img{
+      background-image: url('2.3.png');
+      position: absolute;
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      z-index: 0;
+      position: absolute;
+      height: 60vw;
+      margin-left: -27%;
+      margin-top: 0%;
+      opacity: 0;
+      transition: filter 1.5s ease-in-out;
+      animation: focusIn 3s forwards, zoomIn 4s forwards, fadeInOpacity 3s forwards;
+      animation-delay: 1s;
+    }
+
+    .first-img{
+      background-image: url('2.2.png');
+      position: absolute;
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      z-index: 0;
+      position: absolute;
+      height: 60vw;
+      margin-left: 0%;
+      opacity: 0;
+      margin-top: 0%;
+      transition: filter 1.5s ease-in-out;
+      animation: focusIn 3s forwards, zoomIn 4s forwards, fadeInOpacity 3s forwards;
+      animation-delay: 2s;
+    }
+
+    .textbehind-img{
+      font-size: 60vw;
+      font-family: 'Palanquin Dark';
+      z-index: -1;
+      position: absolute;
+      font-weight: bolder;
+      letter-spacing: -100px;
+      margin-left: -27%;
+      margin-top: -22%;
+      color: rgb(238, 171, 38);
+      opacity: 20%;
+    }
+
+    @keyframes focusIn {
+      0% {
+        filter: blur(10px);
+      }
+      100% {
+        filter: blur(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      0% {
+        transform: scale(0.8);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes fadeInOpacity {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
     }
 
   </style>
@@ -155,14 +285,19 @@
   </div>
 
   <div class="first-space">
-    
+    <div class="col spacetext">LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISICING ELIT</div>
   </div>
 
-  <script>
-    window.addEventListener('load', function() {
-      const landingImage = document.querySelector('.landing-image');
-      landingImage.classList.add('focused');
-    });
-  </script>
+  <div class="row secondrow">
+    <div class="third-img"></div>
+    <div class="second-img"></div>
+    <div class="first-img"></div>
+    <div class="textbehind-img">SHIRTS</div>
+  </div>
+
+  <div class="second-space">
+    <div class="col spacetext">LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISICING ELIT</div>
+  </div>
+
+  <script src="landingpage_script.js"></script>
 </body>
-</html>
