@@ -27,7 +27,7 @@ body {
 
     .scrolling-text {
         white-space: nowrap; /* Prevent text wrapping */
-        
+
         animation: scrollText 60s linear infinite; /* Adjust duration as needed */
       }
   
