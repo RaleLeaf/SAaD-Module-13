@@ -3,24 +3,30 @@ window.addEventListener('load', function() {
     landingImage.classList.add('focused');
   });
 
- // Detect request animation frame
-var scroll = window.requestAnimationFrame ||
-// IE Fallback
-function(callback){ window.setTimeout(callback, 1000/60)};
-var elementsToShow = document.querySelectorAll('.show-on-scroll'); 
-
-function loop() {
-
-Array.prototype.forEach.call(elementsToShow, function(element){
-if (isElementInViewport(element)) {
-element.classList.add('is-visible');
-} else {
-element.classList.remove('is-visible');
-}
-});
-
-scroll(loop);
-}
-
-// Call the loop for the first time
-loop();
+  document.addEventListener("DOMContentLoaded", function () {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1
+    };
+  
+    const callback = (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          if (entry.target.classList.contains("first-img")) {
+            entry.target.classList.add("animate-first");
+          } else if (entry.target.classList.contains("second-img")) {
+            entry.target.classList.add("animate-second");
+          } else if (entry.target.classList.contains("third-img")) {
+            entry.target.classList.add("animate-third");
+          }
+        }
+      });
+    };
+  
+    const observer = new IntersectionObserver(callback, options);
+  
+    const targets = document.querySelectorAll(".first-img, .second-img, .third-img");
+    targets.forEach(target => observer.observe(target));
+  });
+  
