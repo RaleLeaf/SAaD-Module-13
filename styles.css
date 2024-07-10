@@ -1,0 +1,19 @@
+.landing-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(10px);
+    transition: filter 3s ease-in-out;
+    animation: focusIn 3s forwards;
+}
+
+@keyframes focusIn {
+    0% {
+        filter: blur(10px);
+    }
+    100% {
+        filter: blur(0);
+    }
+}
+
