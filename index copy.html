@@ -17,6 +17,10 @@
       min-height: 100vh;
     }
 
+    div{
+      border: 1px solid red;
+    }
+
     .material-symbols-outlined {
       font-variation-settings:
       'FILL' 0,
@@ -39,12 +43,13 @@
     }
 
     .firstrow {
-      min-height: 100vh;
+      height: 95vh;
       background-color: azure;
       background-image: url('1bg.png');
       background-repeat: no-repeat;
       background-size: cover;
       position: relative;
+      z-index: -3;
     }
 
     .main-img {
@@ -69,7 +74,7 @@
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
-      z-index: 3;
+      z-index: 0;
       position: absolute;
       height: 90vw;
       margin-left: 24%;
@@ -104,20 +109,32 @@
       margin-left: -40%;
       margin-top: 8%;
       left: 100%;
-      animation: scrollText 10s linear infinite;
+      animation: scrollText 10s linear infinite, fadein 10s;
       animation-duration: 40s;
       
     }
 
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+
     @keyframes scrollText {
       0% {
-        transform: translate(-20%);
+        transform: translate(-80%);
         rotate: -8deg;
       }
       100% {
         transform: translate(-400%);
         rotate: -8deg;
       }
+    }
+
+    .first-space{
+      height: 30vw;
+      background-color: rgb(162, 96, 96);
+      z-index: 10;
     }
 
   </style>
@@ -135,6 +152,10 @@
     <div class="splat"></div>
     <div class="scrolling-text"><strong>GESTOURAGE GESTOURAGE GESTOURAGE GESTOURAGE GESTOURAGE GESTOURAGE GESTOURAGE GESTOURAGE GESTOURAGE GESTOURAGE GESTOURAGE GESTOURAGE GESTOURAGE GESTOURAGE GESTOURAGE GESTOURAGE GESTOURAGE GESTOURAGE GESTOURAGE GESTOURAGE </strong></div>
     <div class="main-img"></div>
+  </div>
+
+  <div class="first-space">
+    
   </div>
 
   <script>
