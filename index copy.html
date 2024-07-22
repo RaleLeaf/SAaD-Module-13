@@ -166,6 +166,7 @@
       z-index: -3;
     }
 
+
     .spacetext{
       display: flex;
       justify-content: center;
@@ -258,6 +259,49 @@
       }
     }
 
+    .shirt1, .shirt2, .shirt3, .shirt4 {
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      z-index: 0;
+      position: absolute;
+      height: 30vw;
+      margin-top: 0%;
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .shirt1{
+      background-image: url('shirt1.png');
+
+
+    }
+
+    .shirt2{
+      background-image: url('shirt2.png');
+
+    }
+
+    .shirt3{
+      background-image: url('shirt3.png');
+
+    }
+
+    .shirt4{
+      background-image: url('shirt4.png');
+
+    }
+
+    .thirdrow {
+      height: 95vh;
+      background-color: azure;
+      background-image: url('1bg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      z-index: -3;
+      display: flex;
+    }
   </style>
 </head>
 <body>
@@ -288,6 +332,13 @@
 
   <div class="second-space">
     <div class="col spacetext">LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISICING ELIT</div>
+  </div>
+
+  <div class="row thirdrow">
+    <div class="shirt1"></div>
+    <div class="shirt2"></div>
+    <div class="shirt3"></div>
+    <div class="shirt4"></div>
   </div>
 
   <script src="landingpage_script.js"></script>
