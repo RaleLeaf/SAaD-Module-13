@@ -258,21 +258,62 @@ body {
 }
 
 .shirt1{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 0;
+    position: absolute;
+    height: 30vw;
+    margin-top: 0%;
+    display: flex;
+    justify-content: space-evenly;
   background-image: url('shirt1.png');
   left: 36%;
+  transition: background-size 0.5s ease;
 }
 
+.shirt1:hover {
+    background-size: 120%; /* Zoom in by increasing the size */
+  } 
+
 .shirt2{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 0;
+    position: absolute;
+    height: 30vw;
+    margin-top: 0%;
+    display: flex;
+    justify-content: space-evenly;
   background-image: url('shirt2.png');
   left: 12%;
 }
 
 .shirt3{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 0;
+    position: absolute;
+    height: 30vw;
+    margin-top: 0%;
+    display: flex;
+    justify-content: space-evenly;
   background-image: url('shirt3.png');
   right: 12%;
 }
 
 .shirt4{
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 0;
+    position: absolute;
+    height: 30vw;
+    margin-top: 0%;
+    display: flex;
+    justify-content: space-evenly;
   background-image: url('shirt4.png');
   right: 36%;
 }
@@ -368,6 +409,7 @@ body {
   border-radius: 10px;
   background-color: white;
   cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
 .show-more:hover {
