@@ -107,117 +107,6 @@
     <div class="col spacetext">LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISICING ELIT</div>
   </div>
 
-  <script src="landingpage_script.js"></script>
-</body>
-  <script>
-    window.addEventListener('load', function() {
-      const landingImage = document.querySelector('.landing-image');
-      landingImage.classList.add('focused');
-    });
-
-    // JavaScript to handle the scroll and hover functionality
-
-  document.addEventListener('DOMContentLoaded', function() {
-      let lastScrollTop = 0;
-      const header = document.querySelector('header');
-
-      window.addEventListener('scroll', function() {
-          let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-          if (scrollTop > lastScrollTop) {
-              // Scrolling down
-              header.classList.add('hidden');
-          } else {
-              // Scrolling up
-              header.classList.remove('hidden');
-          }
-
-          lastScrollTop = scrollTop;
-      });
-
-      // Show header when the cursor is near the top of the screen
-      document.addEventListener('mousemove', function(e) {
-          if (e.clientY < 50) {
-              header.classList.remove('hidden');
-          }
-      });
-  });
-
-  window.addEventListener('load', function() {
-      const landingImage = document.querySelector('.landing-image');
-      landingImage.classList.add('focused');
-    });
-
-    // JavaScript to handle the scroll and hover functionality
-
-  document.addEventListener('DOMContentLoaded', function() {
-      let lastScrollTop = 0;
-      const header = document.querySelector('header');
-
-      window.addEventListener('scroll', function() {
-          let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-          if (scrollTop > lastScrollTop) {
-              // Scrolling down
-              header.classList.add('hidden');
-          } else {
-              // Scrolling up
-              header.classList.remove('hidden');
-          }
-
-          lastScrollTop = scrollTop;
-      });
-
-      // Show header when the cursor is near the top of the screen
-      document.addEventListener('mousemove', function(e) {
-          if (e.clientY < 50) {
-              header.classList.remove('hidden');
-          }
-      });
-  });
-
-  window.addEventListener('load', function() {
-      const landingImage = document.querySelector('.landing-image');
-      landingImage.classList.add('focused');
-    });
-
-    // JavaScript to handle the scroll and hover functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      let lastScrollTop = 0;
-      const header = document.querySelector('header');
-
-      window.addEventListener('scroll', function() {
-          let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-          if (scrollTop > lastScrollTop) {
-              // Scrolling down
-              header.classList.add('hidden');
-          } else {
-              // Scrolling up
-              header.classList.remove('hidden');
-          }
-
-          lastScrollTop = scrollTop;
-      });
-
-      // Show header when the cursor is near the top of the screen
-      document.addEventListener('mousemove', function(e) {
-          if (e.clientY < 50) {
-              header.classList.remove('hidden');
-          }
-      });
-
-      // Scroll to the bottom of the page when .now is clicked
-      document.querySelector('.now').addEventListener('click', function() {
-          window.scrollTo({
-              top: document.body.scrollHeight,
-              behavior: 'smooth'
-          });
-      });
-    });
-  </script>
-</body>
-</html>
   <div class="row thirdrow">
 
     <div class="shop">SHOP NOW!
@@ -250,7 +139,7 @@
     </div>
   </div>
 
-
+  <script src="landingpage_script.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
