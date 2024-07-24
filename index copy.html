@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap 5 Example</title>
+  <title>GESTOURAGE</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="stylesfinal.css" rel="stylesheet" >
@@ -15,12 +15,25 @@
 </head>
 <body>
   <script src="landingpage_script.js"></script>
-  <div class="row navbar">
-    <span class="col-5 material-symbols-outlined" style="font-size: 2vw;">widgets</span>
-    <div class="col-4" id="navbartext">GESTOURAGE</div>
-    <span class="col-1 material-symbols-outlined" style="font-size: 2vw;">shopping_cart</span>
-    <span class="col-1 material-symbols-outlined" style="font-size: 2vw;">bookmark</span>
-    <span class="col-1 material-symbols-outlined" style="font-size: 2vw;">account_circle</span>
+  <div class="navbar sticky-top">
+    <img src="menu.png" alt="Menu" style="margin-left: 30px;" id="menuBtn">
+    <div id="navbartext">GESTOURAGE</div>
+    <input type="text" id="search-bar" placeholder="Search">
+    <div class="right-icons">
+        <img src="trolley.png" alt="Shopping Cart">
+        <img src="bookmark.png" alt="Bookmark">
+        <img src="user.png" alt="User">
+    </div>
+  </div>
+
+  <div id="sideModal" class="side-modal">
+    <a href="javascript:void(0)" class="closebtn" id="closeBtn">&times;</a>
+    <a href="#" class="sidemodalcontent">Best Sellers</a>
+    <a href="#" class="sidemodalcontent">T-Shirts</a>
+    <a href="#" class="sidemodalcontent">Jackets</a>
+    <a href="#" class="sidemodalcontent">Polos</a>
+    <a href="#" class="sidemodalcontent">Towels</a>
+    <!-- Add more options as needed -->
   </div>
 
   <div class="row firstrow">
@@ -44,6 +57,44 @@
     <div class="col spacetext">LOREM IPSUM DOLOR SIT AMET CONSECTETUR ADIPISICING ELIT</div>
   </div>
 
+  <script src="landingpage_script.js"></script>
+</body>
+  <script>
+    window.addEventListener('load', function() {
+      const landingImage = document.querySelector('.landing-image');
+      landingImage.classList.add('focused');
+    });
+
+    // JavaScript to handle the scroll and hover functionality
+
+  document.addEventListener('DOMContentLoaded', function() {
+      let lastScrollTop = 0;
+      const header = document.querySelector('header');
+
+      window.addEventListener('scroll', function() {
+          let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+          if (scrollTop > lastScrollTop) {
+              // Scrolling down
+              header.classList.add('hidden');
+          } else {
+              // Scrolling up
+              header.classList.remove('hidden');
+          }
+
+          lastScrollTop = scrollTop;
+      });
+
+      // Show header when the cursor is near the top of the screen
+      document.addEventListener('mousemove', function(e) {
+          if (e.clientY < 50) {
+              header.classList.remove('hidden');
+          }
+      });
+  });
+  </script>
+</body>
+</html>
   <div class="row thirdrow">
 
     <div class="shop">SHOP NOW!

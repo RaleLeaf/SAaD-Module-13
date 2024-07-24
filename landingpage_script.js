@@ -29,4 +29,12 @@ window.addEventListener('load', function() {
     const targets = document.querySelectorAll(".first-img, .second-img, .third-img");
     targets.forEach(target => observer.observe(target));
   });
-  
+
+
+  document.getElementById("menuBtn").addEventListener("click", function() {
+    document.getElementById("sideModal").style.width = "250px";
+  });
+
+  document.getElementById("closeBtn").addEventListener("click", function() {
+    document.getElementById("sideModal").style.width = "0";
+  });
