@@ -4,10 +4,6 @@ body {
   min-height: 100vh;
 }
 
-/* div{
-  border: 1px solid red;
-} */
-
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -561,20 +557,20 @@ margin-right: 30px;
 }
 
 .icon1{
-  margin-top: -685%;
-  margin-left: 430%;
+  margin-top: -645%;
+  margin-left: 410%;
 }
 .icon2{
   margin-top: -535%;
   margin-left: 338%;
 }
 .icon3{
-  margin-top: -365%;
-  margin-left: 229%;
+  margin-top: -347%;
+  margin-left: 220%;
 }
 .icon4{
-  margin-top: -320%;
-  margin-left: 200%;
+  margin-top: -305%;
+  margin-left: 197%;
 }
 
 .now {
