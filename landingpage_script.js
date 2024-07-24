@@ -39,7 +39,7 @@ window.addEventListener('load', function() {
     document.getElementById("sideModal").style.width = "0";
   });
 
-document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
     var dropdownButton = document.getElementById('dropdownButton');
     var dropdownContent = document.getElementById('dropdownContent');
 
