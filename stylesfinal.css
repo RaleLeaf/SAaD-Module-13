@@ -159,7 +159,7 @@ margin-right: 30px;
 }
 
 .firstrow {
-  height: 95vh;
+  height: 90vh;
   background-color: azure;
   background-image: url('1bg.png');
   background-repeat: no-repeat;
@@ -248,15 +248,55 @@ margin-right: 30px;
 }
 
 .first-space{
-  height: 15vw;
+  height: auto;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   background-color: rgb(255, 255, 255);
   z-index: 10;
 }
 
+@media (max-width: 575.98px) {
+  .first-space {
+    margin-top: -70vh;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .first-space {
+    margin-top: -30vh;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .first-space {
+    margin-top: -25vh;
+  }
+}
+
 .second-space{
-  height: 15vw;
+  height: auto;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
   background-color: rgb(255, 255, 255);
-  z-index: 11;
+  z-index: 10;
+}
+
+@media (max-width: 575.98px) {
+  .second-space {
+    margin-top: -70vh;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .second-space {
+    margin-top: -30vh;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .second-space {
+    margin-top: -25vh;
+  }
 }
 
 .secondrow {
@@ -269,12 +309,13 @@ margin-right: 30px;
   z-index: -3;
 }
 
-
 .spacetext{
   display: flex;
+  padding-top: auto;
   justify-content: center;
-  padding-top: 6.5%;
-  font-size: 30px;
+  align-items: center;
+  text-align: center;
+  font-size: 5vh;
   font-family: 'Lexend Tera';
 }
 
