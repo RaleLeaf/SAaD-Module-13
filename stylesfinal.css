@@ -497,9 +497,9 @@ margin-right: 30px;
   font-weight: bold;
 }
 
-.shop{
-  margin-top: -30% !important;
-  margin-left: 2%;
+.shop {
+  margin-top: -68vh !important; /* Change from % to vh */
+  margin-left: 2vw; /* Change from % to vw */
   font-size: 7vw;
   font-family: 'Lexend Tera';
   font-weight: bolder;
