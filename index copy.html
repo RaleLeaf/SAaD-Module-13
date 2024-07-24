@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend+Tera:wght@100..900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Palanquin+Dark:wght@700&display=swap" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <script src="landingpage_script.js"></script>
@@ -20,8 +21,8 @@
     <div id="navbartext">GESTOURAGE</div>
     <input type="text" id="search-bar" placeholder="Search">
     <div class="right-icons">
-        <img src="trolley.png" alt="Shopping Cart">
-        <img src="bookmark.png" alt="Bookmark">
+      <img src="trolley.png" alt="Shopping Cart" data-toggle="modal" data-target="#cartModal">
+      <img src="bookmark.png" alt="Bookmark" data-toggle="modal" data-target="#bookmarkModal">
         <img src="user.png" alt="User">
     </div>
   </div>
@@ -35,6 +36,46 @@
     <a href="#" class="sidemodalcontent">Towels</a>
     <!-- Add more options as needed -->
   </div>
+
+  <!-- Cart Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="cartModalLabel">Shopping Cart</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <!-- Cart items go here -->
+              <p>Your cart is currently empty.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-dark">Check Out</button>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Bookmark Modal -->
+<div class="modal fade" id="bookmarkModal" tabindex="-1" aria-labelledby="bookmarkModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="bookmarkModalLabel">Bookmarks</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <!-- Bookmarked items go here -->
+              <p>You have no bookmarks.</p>
+          </div>
+      </div>
+  </div>
+</div>
+
 
   <div class="row firstrow">
     <div class="splat"></div>
@@ -128,4 +169,7 @@
   </div>
 
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
 </body>
