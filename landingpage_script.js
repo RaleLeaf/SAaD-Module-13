@@ -38,3 +38,18 @@ window.addEventListener('load', function() {
   document.getElementById("closeBtn").addEventListener("click", function() {
     document.getElementById("sideModal").style.width = "0";
   });
+
+document.addEventListener('DOMContentLoaded', function() {
+    var dropdownButton = document.getElementById('dropdownButton');
+    var dropdownContent = document.getElementById('dropdownContent');
+
+    dropdownButton.addEventListener('click', function() {
+        dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+    });
+
+    window.addEventListener('click', function(event) {
+        if (!event.target.matches('.icon')) {
+            dropdownContent.style.display = 'none';
+        }
+    });
+});
